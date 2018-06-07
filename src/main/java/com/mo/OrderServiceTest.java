@@ -21,14 +21,10 @@ public class OrderServiceTest extends AbstractTesterSamplerClient {
 
     public SampleResult runTest(JavaSamplerContext javaSamplerContext) {
         SampleResult result = new SampleResult();
+        result.sampleStart();
         try {
-            long start = System.currentTimeMillis();
-
             orderService.findById(1111111111111L);
-
             result.setSuccessful(true);
-            long end = System.currentTimeMillis();
-            result.setResponseData((end - start) + "", null);
         } finally {
             result.sampleEnd();
         }
