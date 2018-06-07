@@ -1,7 +1,7 @@
 package com.mo;
 
 import com.chinaredstar.ordercenter.serviceinterface.order.IOrderService;
-import com.mo.handler.AbstractTesterSamplerClient;
+import com.mo.handler.tester.AbstractTesterSamplerClient;
 import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
 import org.apache.jmeter.samplers.SampleResult;
 
