@@ -2,16 +2,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-  	<groupId>com.mo</groupId>
+    <groupId>com.mo</groupId>
     <artifactId>dubbo-jmeter-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>dubbo-jmeter-test</name>
 
+
     <properties>
+        <org.springframework>4.3.9.RELEASE</org.springframework>
+        <org.springframework.boot>1.3.3.RELEASE</org.springframework.boot>
+        <io.dropwizard.metrics>3.1.2</io.dropwizard.metrics>
+        <org.apache.httpcomponents>4.3.3</org.apache.httpcomponents>
+        <com.fasterxml.jackson>2.6.5</com.fasterxml.jackson>
+        <org.thymeleaf>2.1.4.RELEASE</org.thymeleaf>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -20,7 +28,6 @@
             <version>1.7.03.RELEASE</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -28,7 +35,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.jmeter/ApacheJMeter_java -->
         <dependency>
             <groupId>org.apache.jmeter</groupId>
             <artifactId>ApacheJMeter_java</artifactId>
@@ -68,54 +74,44 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>${org.springframework}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>${org.springframework}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>${org.springframework}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>${org.springframework}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+
         <dependency>
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>3.21.0-GA</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.jboss.netty/netty -->
         <dependency>
             <groupId>org.jboss.netty</groupId>
             <artifactId>netty</artifactId>
             <version>3.2.10.Final</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
         <dependency>
             <groupId>com.101tec</groupId>
             <artifactId>zkclient</artifactId>
             <version>0.10</version>
         </dependency>
+
 
     </dependencies>
 
