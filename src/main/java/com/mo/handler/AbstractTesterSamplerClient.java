@@ -1,6 +1,5 @@
-package com.mo;
+package com.mo.handler;
 
-import com.mo.handler.ApplicationContextHandler;
 import org.apache.jmeter.protocol.java.sampler.AbstractJavaSamplerClient;
 import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
 
@@ -9,7 +8,7 @@ import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
  */
 public abstract class AbstractTesterSamplerClient extends AbstractJavaSamplerClient {
 
-    ApplicationContextHandler contextHandler;
+    public ApplicationContextHandler contextHandler;
 
     /**
      * 初始化所需要的Bean
