@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns="http://www.springframework.org/schema/beans"
+                                             xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 消费方应用信息 -->
+    <dubbo:application name="p-trace-oc-test" />
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="zk201.dev.rs.com:2181,zk202.dev.rs.com:2181,zk203.dev.rs.com:2181" />
+
+    <dubbo:consumer check="false"/>
+
+    <dubbo:reference id="orderService" version="1.0.0" interface="com.chinaredstar.ordercenter.serviceinterface.order.IOrderService" timeout="6000" retries="0"  />
+    <!--序列号生成 -->
+    <dubbo:reference id="serialNumberService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.common.ISerialNumberService" timeout="10000" retries="0"  />
+    <!--退单处理-->
+    <dubbo:reference id="refundOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.order.IRefundOrderService" timeout="10000" retries="0"></dubbo:reference>
+    <!--订单查询 -->
+    <dubbo:reference id="queryOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.order.IQueryOrderService" timeout="10000" retries="0"  ></dubbo:reference>
+    <!-- 售后服务 -->
+    <dubbo:reference id="customerServiceService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.order.ICustomerServiceService" timeout="10000" retries="0"
+    ></dubbo:reference>
+    <!--运维监控-->
+    <dubbo:reference id="monitorService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.common.IMonitorService" timeout="10000" retries="0" ></dubbo:reference>
+    <!--支付交易相关-->
+    <dubbo:reference id="paymentService" version="1.0.0" interface="com.chinaredstar.ordercenter.external.payment.IPaymentService" timeout="10000" retries="0"
+    ></dubbo:reference>
+
+    <dubbo:reference id="cAppOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.order.ICAppOrderService" timeout="10000" retries="0"
+    ></dubbo:reference>
+    <dubbo:reference id="bAppOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.order.IBAppOrderService" timeout="10000" retries="0"
+    ></dubbo:reference>
+    <!--验单-->
+    <dubbo:reference id="payService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.payment.IPayService" timeout="10000" retries="0"
+    ></dubbo:reference>
+    <!--买券订单-->
+    <dubbo:reference id="promOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.promotionorder.IPromOrderService" timeout="10000" retries="0"
+    ></dubbo:reference>
+    <!--提供银行订单-->
+    <dubbo:reference id="bankOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.external.bank.IBankOrderService" timeout="10000" retries="0"
+    ></dubbo:reference>
+
+    <dubbo:reference id="xinYiTongHuiOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.external.payment.IXinYiTongHuiOrderService" timeout="10000" retries="0"
+    ></dubbo:reference>
+    <!--公众号-->
+    <dubbo:reference id="gongZhongHaoService" version="1.0.0" interface="com.chinaredstar.ordercenter.external.gongzhonghao.IGongZhongHaoService" timeout="10000" retries="0"
+    ></dubbo:reference>
+
+    <!--家装-->
+    <dubbo:reference id="jZOrderCenterService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.jzorder.IJZOrderCenterService" timeout="10000" retries="0" ></dubbo:reference>
+</beans>
