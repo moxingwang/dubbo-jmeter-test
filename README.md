@@ -16,7 +16,8 @@ mvn clean package -Dmaven.test.skip=true
 #### jmeter设置
 * 将打包后的jar放到[jmeter文件目录]/lib/ext目录下。
 * 启动jmeter GUI界面，依次添加线程组，Sample-java请求，如图
-
+![](https://github.com/moxingwang/dubbo-jmeter-test/blob/87a4a0f10a344c6dd1b9067c361151243b436994/source/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20180608101320.png?raw=true)
+* 选择类名就可以对不同的方法做压测
 
 ## 参考
 * [性能测试工具 Jmeter 测试 Dubbo 接口脚本编写](https://testerhome.com/topics/9980)
