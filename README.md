@@ -1,6 +1,8 @@
+使用jmeter压测dubbo服务。
+
 ## Overview
 * git地址: [dubbo-jmeter-test](https://github.com/moxingwang/dubbo-jmeter-test)
-> 使用jmeter压测dubbo服务。jmetter版本3.2。
+* jmetter版本3.2, dubbo版本2.8.5。
 
 ## 使用方法
 
