@@ -7,6 +7,7 @@
 ````apple js
 修改spring-config-dubbo-consumer.xml
 ````
+> 使用前配置好自己的dubbo服务。
 
 #### 打包
 ````

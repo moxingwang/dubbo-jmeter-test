@@ -13,7 +13,6 @@
     <dubbo:consumer check="false"/>
 
 
-    <dubbo:reference id="orderService" version="1.0.0" interface="com.chinaredstar.ordercenter.serviceinterface.order.IOrderService" timeout="6000" retries="0"/>
-    <dubbo:reference id="queryOrderService" version="1.0.0" interface="com.chinaredstar.ordercenter.service.order.IQueryOrderService" timeout="10000" retries="0"></dubbo:reference>
+    <dubbo:reference id="queryOrderService" version="1.0.0" interface="com.mo.mock.IQueryOrderService" timeout="10000" retries="0"></dubbo:reference>
 
 </beans>

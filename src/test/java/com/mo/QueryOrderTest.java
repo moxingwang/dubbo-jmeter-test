@@ -1,7 +1,6 @@
 package com.mo;
 
-import com.chinaredstar.ordercenter.api.common.OrderResult;
-import com.chinaredstar.ordercenter.service.order.IQueryOrderService;
+import com.mo.mock.IQueryOrderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,7 @@ public class QueryOrderTest {
 
     @Test
     public void testServiceMethod() {
-        OrderResult s = queryOrderService.queryOrderWithItemsBySerialNumber("1111111111111111");
+        String s = queryOrderService.queryOrderWithItemsBySerialNumber("1111111111111111");
         System.out.println(queryOrderService.queryOrderWithItemsBySerialNumber("1111111111111111"));
 
     }

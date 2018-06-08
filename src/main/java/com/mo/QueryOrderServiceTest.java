@@ -1,7 +1,7 @@
 package com.mo;
 
-import com.chinaredstar.ordercenter.service.order.IQueryOrderService;
 import com.mo.handler.tester.AbstractTesterSamplerClient;
+import com.mo.mock.IQueryOrderService;
 import org.apache.jmeter.protocol.java.sampler.JavaSamplerContext;
 import org.apache.jmeter.samplers.SampleResult;
 

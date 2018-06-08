@@ -22,11 +22,7 @@
 
 
     <dependencies>
-        <dependency>
-            <groupId>com.chinaredstar</groupId>
-            <artifactId>p-trade-oc-api</artifactId>
-            <version>1.7.03.RELEASE</version>
-        </dependency>
+
 
         <dependency>
             <groupId>junit</groupId>
